@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --ocean-deep: #042f2e;
+    --ocean-teal: #008f7a;
+    --ocean-turquoise: #0d9488;
+    --ocean-aqua: #14b8a6;
+    --seafoam-mid: #5eead4;
+    --seafoam-soft: #99f6e4;
+    --seafoam-mist: #ccfbf1;
+    --pearl-bg: #e6f7f4;
+    --pearl-surface: #f4fbf9;
+    --pearl-white: #ffffff;
+  }
+
+  body,
+  .dashboard-theme {
+    background-color: #e2f5f1;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(0, 143, 122, 0.28) 0px, transparent 52%),
+      radial-gradient(at 85% 5%, rgba(20, 184, 166, 0.24) 0px, transparent 50%),
+      radial-gradient(at 50% 45%, rgba(153, 246, 228, 0.35) 0px, transparent 60%),
+      linear-gradient(180deg, #d0f0ea 0%, #e6f8f5 48%, #f5fbfa 100%);
+    background-attachment: fixed;
+    color: #042f2e;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom sleek seafoam scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(204, 251, 241, 0.45);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 143, 122, 0.45);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 143, 122, 0.75);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.84) 0%,
+      rgba(240, 253, 250, 0.72) 60%,
+      rgba(204, 251, 241, 0.55) 100%
+    );
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(13, 148, 136, 0.18);
+    box-shadow:
+      0 10px 32px -6px rgba(4, 47, 46, 0.07),
+      0 4px 12px -2px rgba(13, 148, 136, 0.05),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  }
+
+  .glass-panel-interactive {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.86) 0%,
+      rgba(240, 253, 250, 0.74) 60%,
+      rgba(204, 251, 241, 0.58) 100%
+    );
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(13, 148, 136, 0.2);
+    box-shadow:
+      0 10px 32px -6px rgba(4, 47, 46, 0.07),
+      0 4px 12px -2px rgba(13, 148, 136, 0.05),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-panel-interactive:hover {
+    border-color: rgba(0, 143, 122, 0.45);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(230, 252, 248, 0.88) 100%
+    );
+    box-shadow:
+      0 16px 38px -8px rgba(0, 143, 122, 0.15),
+      0 0 22px -6px rgba(20, 184, 166, 0.25),
+      inset 0 1px 0 0 rgba(255, 255, 255, 1);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(13, 148, 136, 0.22);
+  }
+
+  .architectural-grid {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(13, 148, 136, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(13, 148, 136, 0.055) 1px, transparent 1px);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 16px rgba(20, 184, 166, 0.35);
+  }
+}
+
+/* Global Harmonious Coastal Seafoam, Mint & Pearl Palette (Image 2 Aesthetic) */
+.text-white {
+  color: #042f2e !important;
+}
+.text-slate-100,
+.text-slate-200 {
+  color: #0f3d3b !important;
+}
+.text-slate-300 {
+  color: #1f5754 !important;
+}
+.text-slate-400,
+.text-slate-500 {
+  color: #467874 !important;
+}
+
+/* Vibrant Turquoise & Lagoon Accents */
+.text-cyan-200,
+.text-cyan-300,
+.text-cyan-400 {
+  color: #007f6e !important;
+}
+.text-emerald-300,
+.text-emerald-400 {
+  color: #047857 !important;
+}
+.text-violet-300,
+.text-violet-400 {
+  color: #008f7a !important;
+}
+.text-amber-200,
+.text-amber-300,
+.text-amber-400 {
+  color: #b45309 !important;
+}
+.text-rose-300,
+.text-rose-400 {
+  color: #be123c !important;
+}
+
+/* Remap Dark Surfaces across Landing Page & Dashboard to Image 2 Seafoam & Frosted Pearl */
+.bg-\[\#050814\],
+.bg-\[\#03060E\],
+.bg-\[\#040713\],
+.bg-\[\#050816\],
+.bg-\[\#050816\]\/60,
+.bg-\[\#050816\]\/70,
+.bg-\[\#050816\]\/80,
+.bg-\[\#050816\]\/85,
+.bg-\[\#050816\]\/90,
+.bg-\[\#050816\]\/95 {
+  background-color: rgba(226, 248, 243, 0.92) !important;
+}
+
+.bg-\[\#060916\],
+.bg-\[\#060A18\],
+.bg-\[\#070B1A\],
+.bg-\[\#050918\],
+.bg-\[\#080D1C\],
+.bg-\[\#080D1C\]\/80,
+.bg-\[\#080D1C\]\/85,
+.bg-\[\#080D1C\]\/90,
+.bg-\[\#080D1C\]\/95 {
+  background: linear-gradient(
+    145deg,
+    rgba(242, 253, 250, 0.94) 0%,
+    rgba(220, 247, 241, 0.88) 100%
+  ) !important;
+}
+
+.bg-\[\#080D20\],
+.bg-\[\#090E24\],
+.bg-\[\#0A1026\],
+.bg-\[\#0B112B\],
+.bg-\[\#0B1224\],
+.bg-\[\#0C122A\],
+.bg-\[\#070B19\]\/78,
+.bg-\[\#060A18\]\/85,
+.bg-\[\#060A18\]\/95,
+.bg-\[\#080D1E\]\/75 {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(236, 253, 249, 0.84) 100%
+  ) !important;
+  box-shadow:
+    0 10px 30px -6px rgba(4, 47, 46, 0.07),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+.border-white\/10,
+.border-white\/15,
+.border-white\/20,
+.border-white\/\[0\.05\],
+.border-white\/\[0\.06\],
+.border-white\/\[0\.07\],
+.border-white\/\[0\.08\],
+.border-white\/\[0\.09\],
+.border-white\/\[0\.1\],
+.border-white\/\[0\.12\] {
+  border-color: rgba(13, 148, 136, 0.22) !important;
+}
+
+.bg-white\/\[0\.02\],
+.bg-white\/\[0\.03\],
+.bg-white\/\[0\.04\],
+.bg-white\/\[0\.05\],
+.bg-white\/\[0\.06\],
+.bg-white\/5,
+.bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.btn-ocean-primary,
+.btn-ocean-primary span {
+  color: #ffffff !important;
+}
